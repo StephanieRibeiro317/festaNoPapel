@@ -1,68 +1,60 @@
-// ================= script serviços =================
-
-     document.addEventListener("DOMContentLoaded", function () {
-
-      const videoModal = document.getElementById('videoModal');
-      const iframe = document.getElementById("modalVideo");
-      const videoCards = document.querySelectorAll(".video-card");
-
-      // Quando clicar em um card
-      videoCards.forEach(card => {
-        card.addEventListener("click", function () {
-          const videoURL = this.getAttribute("data-video");
-          iframe.src = videoURL + "?autoplay=1";
-        });
-      });
-
-      // Quando fechar o modal, parar o vídeo
-      videoModal.addEventListener('hidden.bs.modal', function () {
-        iframe.src = "";
-      });
-
-    });
-
-    // ================= ABRIR VÍDEO =================
-const videoCards = document.querySelectorAll(".video-card-netflix");
-const modalVideo = document.getElementById("modalVideo");
-
-videoCards.forEach(card => {
-  card.addEventListener("click", function () {
-    modalVideo.src = this.getAttribute("data-video");
-  });
-});
-
-// Limpa vídeo ao fechar modal
-document.getElementById("videoModal")
-  .addEventListener("hidden.bs.modal", function () {
-    modalVideo.src = "";
-  });
-
-
-// ================= ÁREA VIP =================
+let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 document.addEventListener("DOMContentLoaded", function () {
 
+  const modalVideo = document.getElementById("modalVideo");
   const areaVip = document.getElementById("areaVipConteudo");
   const bloqueio = document.getElementById("bloqueioVip");
 
-  let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+  // ================= ABRIR VÍDEO =================
+  document.addEventListener("click", function (e) {
 
-  const ehAssinante = carrinho.find(item => item.tipo === "assinatura");
+    const card = e.target.closest(".video-card-netflix");
 
+    if (card) {
+      const videoURL = card.getAttribute("data-video");
+      modalVideo.src = videoURL + "?autoplay=1";
+    }
+
+  });
+
+  document.getElementById("videoModal")
+    .addEventListener("hidden.bs.modal", function () {
+      modalVideo.src = "";
+    });
+
+  // ================= ÁREA VIP =================
+
+  const ehAssinante = true;
   if (ehAssinante) {
 
     bloqueio.style.display = "none";
 
-    areaVip.innerHTML = `
-      <div class="col-md-3">
-        <div class="video-card-netflix"
-             data-video="https://www.youtube.com/embed/Uq5e291QdZ0"
-             data-bs-toggle="modal"
-             data-bs-target="#videoModal">
-          <img src="https://img.youtube.com/vi/Uq5e291QdZ0/hqdefault.jpg"
-               class="img-fluid rounded">
-          <p class="mt-2">Aula Exclusiva VIP</p>
-        </div>
-      </div>
-    `;
+    const videosVip = [
+      { id: "wLvjpIygJVo", titulo: "Aula VIP 1" },
+      { id: "kiAk4KZafRw", titulo: "Aula VIP 2" },
+      { id: "pWFKRgR0Aag", titulo: "Configuração Avançada Cameo 5" }
+    ];
+
+    videosVip.forEach(video => {
+
+  const col = document.createElement("div");
+  col.className = "col-md-3";
+
+  col.innerHTML = `
+    <div class="video-card-netflix"
+         data-video="https://www.youtube.com/embed/${video.id}"
+         data-bs-toggle="modal"
+         data-bs-target="#videoModal">
+      <img src="https://img.youtube.com/vi/${video.id}/hqdefault.jpg"
+           class="img-fluid rounded">
+      <p class="mt-2">${video.titulo}</p>
+    </div>
+  `;
+
+  areaVip.appendChild(col);
+});
+
+
   }
+
 });

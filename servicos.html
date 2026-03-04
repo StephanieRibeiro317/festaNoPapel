@@ -18,115 +18,141 @@
     </div>
   </nav>
 
-<!-- ================= SERVIÇOS NETFLIX STYLE ================= -->
-<section class="py-5" id="servicos">
-  <div class="container">
+  <!-- ================= SERVIÇOS NETFLIX STYLE ================= -->
+  <section class="py-5" id="servicos">
+    <div class="container">
 
-    <div class="text-center mb-5">
-      <h1>Central de Conteúdos</h1>
-      <p class="text-light">Aprenda, evolua e domine sua Silhouette</p>
+      <div class="text-center mb-5">
+        <h1>Central de Conteúdos</h1>
+        <p class="text-light">Aprenda, evolua e domine sua Silhouette</p>
+      </div>
+
+      <!-- ABAS -->
+      <ul class="nav nav-pills justify-content-center mb-5 abas-servicos">
+        <li class="nav-item">
+          <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#organizacao">
+            📂 Organização
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#manutencao">
+            🛠️ Manutenção
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tutoriais">
+            ✂️ Tutoriais
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#vip">
+            👑 Área VIP
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+
+        <!-- ================= ORGANIZAÇÃO ================= -->
+        <div class="tab-pane fade show active" id="organizacao">
+          <div class="row g-4">
+
+            <div class="col-md-3">
+              <div class="video-card-netflix" data-video="https://www.youtube.com/embed/Uq5e291QdZ0"
+                data-bs-toggle="modal" data-bs-target="#videoModal">
+                <img src="https://img.youtube.com/vi/Uq5e291QdZ0/hqdefault.jpg" class="img-fluid rounded">
+                <p class="mt-2">Como armazenar seus arquivos</p>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="video-card-netflix"
+                data-video="https://www.youtube.com/embed/WOM8wUYQ2Bs?si=orEmeEIfYVTPL94e0" data-bs-toggle="modal"
+                data-bs-target="#videoModal">
+                <img src="https://img.youtube.com/vi/WOM8wUYQ2Bs/hqdefault.jpg" class="img-fluid rounded">
+                <p class="mt-2">Como salvar seus arquivos</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ================= MANUTENÇÃO ================= -->
+        <div class="tab-pane fade" id="manutencao">
+          <div class="row g-4">
+
+            <div class="col-md-3">
+              <div class="video-card-netflix" data-video="https://www.youtube.com/embed/FCqsSV4r5v0"
+                data-bs-toggle="modal" data-bs-target="#videoModal">
+                <img src="https://img.youtube.com/vi/FCqsSV4r5v0/hqdefault.jpg" class="img-fluid rounded">
+                <p class="mt-2">Manutenção da Silhouette</p>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="video-card-netflix"
+                data-video="https://www.youtube.com/embed//9agI06FgJyI?si=nc7P9aZQZ2fVP5KL" data-bs-toggle="modal"
+                data-bs-target="#videoModal">
+
+                <img src="https://img.youtube.com/vi/9agI06FgJyI/hqdefault.jpg" class="img-fluid rounded">
+
+                <p class="mt-2">Manutenção Preventiva da Silhouette</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ================= TUTORIAIS ================= -->
+        <div class="tab-pane fade" id="tutoriais">
+          <div class="row g-4">
+
+            <div class="col-md-3">
+              <div class="video-card-netflix" data-video="https://www.youtube.com/embed/pWFKRgR0Aag"
+                data-bs-toggle="modal" data-bs-target="#videoModal">
+                <img src="https://img.youtube.com/vi/pWFKRgR0Aag/hqdefault.jpg" class="img-fluid rounded">
+                <p class="mt-2">Como usar o Cameo 5</p>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="video-card-netflix"
+                data-video="https://www.youtube.com/embed//9xJHLvMjjQQ?si=zht7pOlOTe4Z544M" data-bs-toggle="modal"
+                data-bs-target="#videoModal">
+
+                <img src="https://img.youtube.com/vi/9xJHLvMjjQQ/hqdefault.jpg" class="img-fluid rounded">
+
+                <p class="mt-2">Tudo o que a Silhouette Cameo 5 corta</p>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+        <!-- ================= ÁREA VIP ================= -->
+        <div class="tab-pane fade" id="vip">
+          <div class="row g-4" id="areaVipConteudo">
+
+            <!-- Conteúdo liberado via JS -->
+
+          </div>
+
+          <div id="bloqueioVip" class="text-center py-5">
+            <h4>🔒 Conteúdo exclusivo para assinantes</h4>
+            <p>Assine o Clube Festa no Papel para desbloquear.</p>
+          </div>
+
+        </div>
+
+      </div>
     </div>
+  </section>
 
-    <!-- ABAS -->
-   <ul class="nav nav-pills justify-content-center mb-5 abas-servicos">
-      <li class="nav-item">
-        <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#organizacao">
-          📂 Organização
-        </button>
-      </li>
-      <li class="nav-item">
-        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#manutencao">
-          🛠️ Manutenção
-        </button>
-      </li>
-      <li class="nav-item">
-        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tutoriais">
-          ✂️ Tutoriais
-        </button>
-      </li>
-      <li class="nav-item">
-        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#vip">
-          👑 Área VIP
-        </button>
-      </li>
-    </ul>
 
-    <div class="tab-content">
 
-      <!-- ================= ORGANIZAÇÃO ================= -->
-      <div class="tab-pane fade show active" id="organizacao">
-        <div class="row g-4">
-
-          <div class="col-md-3">
-            <div class="video-card-netflix"
-                 data-video="https://www.youtube.com/embed/Uq5e291QdZ0"
-                 data-bs-toggle="modal"
-                 data-bs-target="#videoModal">
-              <img src="https://img.youtube.com/vi/Uq5e291QdZ0/hqdefault.jpg" class="img-fluid rounded">
-              <p class="mt-2">Como armazenar seus arquivos</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- ================= MANUTENÇÃO ================= -->
-      <div class="tab-pane fade" id="manutencao">
-        <div class="row g-4">
-
-          <div class="col-md-3">
-            <div class="video-card-netflix"
-                 data-video="https://www.youtube.com/embed/FCqsSV4r5v0"
-                 data-bs-toggle="modal"
-                 data-bs-target="#videoModal">
-              <img src="https://img.youtube.com/vi/FCqsSV4r5v0/hqdefault.jpg" class="img-fluid rounded">
-              <p class="mt-2">Manutenção da Silhouette</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- ================= TUTORIAIS ================= -->
-      <div class="tab-pane fade" id="tutoriais">
-        <div class="row g-4">
-
-          <div class="col-md-3">
-            <div class="video-card-netflix"
-                 data-video="https://www.youtube.com/embed/pWFKRgR0Aag"
-                 data-bs-toggle="modal"
-                 data-bs-target="#videoModal">
-              <img src="https://img.youtube.com/vi/pWFKRgR0Aag/hqdefault.jpg" class="img-fluid rounded">
-              <p class="mt-2">Como usar o Cameo 5</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- ================= ÁREA VIP ================= -->
-      <div class="tab-pane fade" id="vip">
-        <div class="row g-4" id="areaVipConteudo">
-
-          <!-- Conteúdo liberado via JS -->
-
-        </div>
-
-        <div id="bloqueioVip" class="text-center py-5">
-          <h4>🔒 Conteúdo exclusivo para assinantes</h4>
-          <p>Assine o Clube Festa no Papel para desbloquear.</p>
-        </div>
-
-      </div>
-
-    </div>
   </div>
-</section>
-        
-
-
-      </div>
-    </div>
+  </div>
   </section>
 
   <!-- MODAL -->
