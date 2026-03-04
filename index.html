@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <!-- Meta Básicas -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO -->
+  <meta name="description"
+    content="Festa no Papel - Arquivos de corte para Silhouette. Kits digitais para papelaria personalizada.">
+  <meta name="keywords" content="arquivos de corte, silhouette, papelaria personalizada, kit festa, festa no papel">
+  <meta name="author" content="Stephanie Ribeiro">
+  <title>Festa no Papel | Arquivos de Corte para Silhouette</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="./assets/img/logo/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/logo/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/logo/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/logo/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/img/logo/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="./assets/img/logo/android-chrome-512x512.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS (Animações) -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS Personalizado -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
+  <img src="assets/img/logo/android-chrome-192x192.png" alt="Logo Festa no Papel" width="40" height="40" class="me-2">
+  Festa no Papel
+</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#produtos">Arquivos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#como-funciona">Como Funciona</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+          <li class="nav-item">
+            <a class="nav-link position-relative" data-bs-toggle="offcanvas" href="#carrinhoOffcanvas">
+              <i class="fa-solid fa-cart-shopping"></i> Carrinho
+              <span id="contadorCarrinho"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                0
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Kits Digitais para Festas Inesquecíveis</h1>
+      <p>Arquivos prontos para Silhouette. Práticos, delicados e profissionais.</p>
+
+      <a href="#produtos" class="btn-hero">
+        Descobrir os Kits
+      </a>
+    </div>
+  </section>
+  <!-- ================= PRODUTOS ================= -->
+  <section id="produtos" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5" data-aos="fade-up">Nossos Arquivos</h2>
+
+      <div class="carrossel-container">
+        <button class="carrossel-btn prev">&#10094;</button>
+        <div class="carrossel-produtos" id="listaProdutos"></div>
+        <button class="carrossel-btn next">&#10095;</button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ================= COMO FUNCIONA ================= -->
+  <section id="como-funciona" class="py-5">
+    <div class="container text-center" data-aos="fade-up">
+      <h2 class="mb-4">Como Funciona</h2>
+      <p class="mb-5">Compre em 3 Passos Simples - Rápido, seguro e 100% digital. Sem espera e sem complicações.</p>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- PASSO 1 -->
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body p-4">
+            <div class="mb-3">
+              <span class="badge bg-success fs-6">1</span>
+            </div>
+            <i class="fa-solid fa-cart-shopping fa-2x mb-3 text-success"></i>
+            <h5 class="fw-bold">Escolha seus Arquivos</h5>
+            <p>
+              Navegue pelos kits digitais, adicione ao carrinho e selecione
+              seus arquivos favoritos para sua próxima festa.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PASSO 2 -->
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body p-4">
+            <div class="mb-3">
+              <span class="badge bg-success fs-6">2</span>
+            </div>
+            <i class="fa-solid fa-credit-card fa-2x mb-3 text-success"></i>
+            <h5 class="fw-bold">Pagamento Seguro</h5>
+            <p>
+              Finalize com total segurança via Pix, cartão ou boleto.
+              Aprovação rápida e proteção garantida.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PASSO 3 -->
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body p-4">
+            <div class="mb-3">
+              <span class="badge bg-success fs-6">3</span>
+            </div>
+            <i class="fa-solid fa-download fa-2x mb-3 text-success"></i>
+            <h5 class="fw-bold">Download Imediato</h5>
+            <p>
+              Receba o acesso automaticamente após a confirmação
+              e comece a usar na sua Silhouette em poucos minutos.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="mt-4 text-muted">
+      ✔️ Entrega 100% digital | ✔️ Acesso imediato | ✔️ Suporte via WhatsApp
+    </p>
+
+    <!-- GATILHO DE AÇÃO -->
+    <div class="mt-5">
+      <a href="#produtos" class="btn btn-success btn-lg px-5">
+        Quero Meus Arquivos Agora
+      </a>
+    </div>
+
+    </div>
+    <!-- ================= ASSINATURA ================= -->
+    <section id="assinatura" class="py-5" style="background: #B79AD6;">
+      <div class="container" data-aos="fade-up">
+        <div class="row align-items-center">
+
+          <div class="col-md-6 text-white">
+            <h2 class="fw-bold mb-3">Clube Festa no Papel</h2>
+            <p class="mb-4">
+              Receba novos arquivos de corte todos os meses e tenha acesso exclusivo
+              a kits especiais para Silhouette.
+            </p>
+
+            <ul class="list-unstyled">
+              <li>✔️ Novos kits mensais</li>
+              <li>✔️ Arquivos exclusivos</li>
+              <li>✔️ Acesso antecipado aos lançamentos</li>
+              <li>✔️ Comunidade VIP</li>
+            </ul>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card shadow-lg border-0">
+              <div class="card-body text-center p-4">
+                <h4 class="fw-bold">Plano Mensal</h4>
+                <p class="display-6 fw-bold text-success">R$ 39,90<span style="font-size:16px;">/mês</span></p>
+                <p>Cancele quando quiser</p>
+                <button class="btn btn-success btn-lg w-100">
+                  Assinar Agora
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVIÇOS ================= -->
+    <section id="servicos" class="py-5">
+      <div class="container text-center" data-aos="fade-up">
+        <h2 class="mb-4">Serviços & Conteúdos Educativos</h2>
+        <p class="mb-5">
+          Aprenda a organizar seus arquivos, facilitar downloads e manter sua
+          Silhouette funcionando perfeitamente.
+        </p>
+
+        <div class="row g-4">
+
+          <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+              <div class="card-body">
+                <i class="fa-solid fa-folder-open fa-2x mb-3 text-success"></i>
+                <h5>Organização de Arquivos</h5>
+                <p>Como acessar, salvar e organizar seus kits digitais.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+              <div class="card-body">
+                <i class="fa-solid fa-video fa-2x mb-3 text-success"></i>
+                <h5>Vídeo Aulas</h5>
+                <p>Passo a passo para facilitar seu uso na Silhouette.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+              <div class="card-body">
+                <i class="fa-solid fa-screwdriver-wrench fa-2x mb-3 text-success"></i>
+                <h5>Manutenção da Silhouette</h5>
+                <p>Dicas para manter sua máquina sempre perfeita.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <a href="servicos.html" class="btn btn-primary mt-4">
+          Ver Página Completa
+        </a>
+
+      </div>
+    </section>
+    
+   <!-- ================= CONTATO ================= -->
+<section id="contato" class="py-5 bg-light">
+  <div class="container" data-aos="fade-up">
+
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Contato</h2>
+      <p class="text-muted">Entre em contato ou visualize nossa localização demonstrativa</p>
+    </div>
+
+    <div class="row align-items-center g-4">
+
+      <!-- INFORMAÇÕES -->
+      <div class="col-md-5">
+        <div class="card shadow-sm border-0 p-4 h-100">
+          
+          <h5 class="fw-bold mb-4">Informações</h5>
+
+          <p class="mb-3">
+            <i class="fa-brands fa-whatsapp text-success me-2"></i>
+            <strong>WhatsApp:</strong> (12) 99999-9999
+          </p>
+
+          <p class="mb-3">
+            <i class="fa-brands fa-instagram text-danger me-2"></i>
+            <strong>Instagram:</strong> @festanopapel
+          </p>
+
+          <p class="mb-3">
+            <i class="fa-solid fa-envelope text-primary me-2"></i>
+            <strong>E-mail:</strong> contato@festanopapel.com
+          </p>
+
+          <hr>
+
+          <p class="text-muted small mb-0">
+            📍 Localização demonstrativa.
+          </p>
+
+        </div>
+      </div>
+
+      <!-- MAPA -->
+      <div class="col-md-7">
+        <div class="map-responsive shadow-sm">
+          <iframe 
+            src="https://www.google.com/maps?q=Sao+Jose+dos+Campos,+SP&output=embed"
+            loading="lazy"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-dark text-white text-center py-3">
+      <p class="mb-0">© 2026 Festa no Papel - Todos os direitos reservados 👽</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- JS Personalizado -->
+    <script src="assets/js/script.js"></script>
+
+    <!-- ================= CARRINHO OFFCANVAS ================= -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="carrinhoOffcanvas">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Seu Carrinho</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <div id="listaCarrinho"></div>
+
+        <hr>
+
+        <h5>Total: R$ <span id="totalCarrinho">0.00</span></h5>
+        <button id="limparCarrinho" class="btn btn-outline-danger w-100 mt-2">
+          Limpar Carrinho
+        </button>
+
+        <button id="abrirCheckout" class="btn btn-success w-100 mt-3">
+          Ir para Checkout
+        </button>
+      </div>
+    </div>
+
+    <!-- ================= CHECKOUT MODAL ================= -->
+    <div class="modal fade" id="checkoutModal" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <h5 class="modal-title">Finalizar Pedido</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+
+            <div class="row">
+
+              <!-- RESUMO DO PEDIDO -->
+              <div class="col-md-6">
+                <h6 class="fw-bold mb-3">Resumo do Pedido</h6>
+                <div id="resumoPedido"></div>
+                <hr>
+                <h5>Total: R$ <span id="totalCheckout">0.00</span></h5>
+              </div>
+
+              <!-- DADOS DO CLIENTE -->
+              <div class="col-md-6">
+                <h6 class="fw-bold mb-3">Seus Dados</h6>
+
+                <form id="formCheckout">
+                  <div class="mb-2">
+                    <input type="text" class="form-control" placeholder="Nome completo" required>
+                  </div>
+
+                  <div class="mb-2">
+                    <input type="email" class="form-control" placeholder="E-mail" required>
+                  </div>
+
+                  <div class="mb-2">
+                    <input type="tel" class="form-control" placeholder="WhatsApp" required>
+                  </div>
+
+                  <button type="submit" class="btn btn-success w-100 mt-3">
+                    Confirmar Pedido
+                  </button>
+                </form>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+</body>
+
+</html>

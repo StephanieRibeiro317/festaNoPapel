@@ -1,0 +1,238 @@
+/* =====================
+   RESET & BASE
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+   background-color: #F3EDB3; /* amarelo claro do logo */
+  color: #2A2A2A;
+  line-height: 1.6;
+}
+h1, h2 {
+  color: #88C28E; /* verde menta do logo */
+}
+
+section {
+  padding: 80px 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+}
+
+p {
+  color: #555;
+}
+
+/* =====================
+   NAVBAR
+===================== */
+.navbar {
+  background: #F3EDB3;
+}
+
+.navbar-brand {
+  color: #88C28E !important;
+  font-weight: 700;
+}
+
+.nav-link:hover {
+  color: #B79AD6 !important;
+}
+
+/* =====================
+   BOTÕES   */
+.btn-primary-custom {
+  background-color: #88C28E;
+  border: none;
+  color: white;
+  border-radius: 30px;
+  padding: 10px 25px;
+  transition: 0.3s;
+}
+
+.btn-primary-custom:hover {
+  background-color: #B79AD6;
+  transform: translateY(-2px);
+}
+/* =====================
+   HERO
+===================== */
+
+.hero {
+  background: linear-gradient(180deg, #F3EDB3 0%, #fff 100%);
+}
+.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background: #F5F3EF;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-top: 20px;
+  max-width: 500px;
+}
+
+.hero .btn-dark {
+  background: #2A2A2A;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+}
+
+.hero .btn-outline-dark {
+  border-radius: 30px;
+}
+
+/* =====================
+   CATEGORIAS
+===================== */
+.categorias .card {
+  border: none;
+  border-radius: 15px;
+  transition: 0.3s;
+  background: #fff;
+}
+
+.categorias .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* =====================
+   PRODUTOS
+===================== */
+.produtos {
+  background: #fff;
+}
+
+.produtos .card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.produtos .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+.produtos .card img {
+  height: 220px;
+  object-fit: cover;
+}
+
+.produtos .btn-dark {
+  border-radius: 25px;
+  font-size: 14px;
+}
+
+/* CARDS */
+.card {
+  border-radius: 20px;
+  border: 2px solid #E7A8B8; /* rosa delicado */
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.08);
+}
+
+/* =====================
+   COMO FUNCIONA
+===================== */
+.como-funciona h5 {
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+/* =====================
+   CLUBE
+===================== */
+
+.clube {
+  background: #B79AD6; /* lilás do logo */
+  color: white;
+}
+
+.clube h2 {
+  font-size: 2.2rem;
+}
+
+.clube .btn-light {
+  border-radius: 30px;
+  padding: 10px 30px;
+  font-weight: 500;
+}
+
+/* =====================
+   DEPOIMENTOS
+===================== */
+.depoimentos .card {
+  border: none;
+  border-radius: 15px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+  background: #2A2A2A;
+}
+
+footer p, footer small {
+  color: #ddd;
+}
+
+/* =====================
+   RESPONSIVIDADE
+===================== */
+@media (max-width: 768px) {
+  .hero {
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-item {
+  transition: transform 0.6s ease-in-out;
+}
+
+/* ANIMAÇÃO DOS BOTOES - efeito magnetic + glow */
+.btn-premium {
+  background: linear-gradient(135deg, #88C28E, #B79AD6);
+  border: none;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 40px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-premium:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(183,154,214,0.4);
+}

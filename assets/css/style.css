@@ -1,0 +1,427 @@
+/* =====================
+   RESET & BASE
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #F3EDB3;
+  /* amarelo claro do logo */
+  color: #2A2A2A;
+  line-height: 1.6;
+}
+
+h1,
+h2 {
+  color: #008000
+  /* verde menta do logo */
+}
+
+section {
+  padding: 80px 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 600;
+}
+
+p {
+  color: #555;
+}
+
+/* =====================
+   NAVBAR
+===================== */
+.navbar {
+  background: #F3EDB3;
+}
+
+.navbar-brand {
+  color: #88C28E !important;
+  font-weight: 700;
+}
+
+.nav-link:hover {
+  color: #B79AD6 !important;
+}
+
+/* =====================
+   BOTÕES   */
+.btn-primary-custom {
+  background-color: #88C28E;
+  border: none;
+  color: white;
+  border-radius: 30px;
+  padding: 10px 25px;
+  transition: 0.3s;
+}
+
+.btn-primary-custom:hover {
+  background-color: #B79AD6;
+  transform: translateY(-2px);
+}
+
+/* =====================
+   HERO
+===================== */
+
+.hero {
+  min-height: 70vh;
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+              url("../img/banners/mesa.webp");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.btn-hero {
+  display: inline-block;
+  padding: 14px 40px;
+  background: white;
+  color: #333;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.btn-hero:hover {
+  background: #f2f2f2;
+  transform: translateY(-3px);
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* =====================
+   CATEGORIAS
+===================== */
+.categorias .card {
+  border: none;
+  border-radius: 15px;
+  transition: 0.3s;
+  background: #fff;
+}
+
+.categorias .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* =====================
+   PRODUTOS
+===================== */
+
+.produto-card {
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.produto-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.img-wrapper {
+  height: 220px;
+  overflow: hidden;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.produto-card:hover img {
+  transform: scale(1.08);
+}
+
+.preco {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #198754;
+}
+
+/* CARDS */
+.card {
+  border-radius: 20px;
+  border: 2px solid #E7A8B8;
+  /* rosa delicado */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* =====================
+   CARROSSEL PRODUTOS
+===================== */
+
+/* Botões */
+.carrossel-btn {
+  background: #88C28E;
+  border: none;
+  color: white;
+  font-size: 22px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 2;
+}
+
+.carrossel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.carrossel-produtos {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+
+  /* SNAP PERFEITO */
+  scroll-snap-type: x mandatory;
+  padding: 20px 0;
+}
+
+.carrossel-produtos::-webkit-scrollbar {
+  display: none;
+}
+
+/* CARD TAMANHO FIXO */
+.carrossel-produtos > div {
+  flex: 0 0 280px; /* largura fixa */
+  scroll-snap-align: start;
+}
+
+/* Ajuste da imagem */
+.img-wrapper {
+  width: 100%;
+  height: 280px; /* mesma proporção do card */
+  overflow: hidden;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ================= COMO FUNCIONA ================= */
+
+#como-funciona {
+    text-align: center;
+}
+
+#como-funciona h2 {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+#como-funciona > p,
+#como-funciona .text-muted {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#como-funciona .mt-5 {
+    text-align: center;
+}
+
+#como-funciona .btn {
+    display: inline-block;
+    padding: 12px 40px;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+#como-funciona .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.como-funciona h5 {
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+/* =====================
+   CLUBE
+===================== */
+
+.clube {
+  background: #B79AD6;
+  /* lilás do logo */
+  color: white;
+}
+
+.clube h2 {
+   font-size: 2.2rem;
+}
+
+.clube .btn-light {
+  border-radius: 30px;
+  padding: 10px 30px;
+  font-weight: 500;
+}
+
+/* =====================
+   DEPOIMENTOS
+===================== */
+.depoimentos .card {
+  border: none;
+  border-radius: 15px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+  background: #2A2A2A;
+}
+
+footer p,
+footer small {
+  color: #ddd;
+}
+
+/* =====================
+   RESPONSIVIDADE
+===================== */
+@media (max-width: 768px) {
+  .hero {
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-item {
+  transition: transform 0.6s ease-in-out;
+}
+
+/* ANIMAÇÃO DOS BOTOES - efeito magnetic + glow */
+.btn-premium {
+  background: linear-gradient(135deg, #88C28E, #B79AD6);
+  border: none;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 40px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-premium:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(183, 154, 214, 0.4);
+}
+
+#assinatura {
+  color: white;
+}
+
+#assinatura h2 {
+  font-size: 2.2rem;
+}
+
+#assinatura .card {
+  border-radius: 20px;
+}
+
+#assinatura .btn-success {
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+/* ANIMAÇÃO DO CARRINHO */
+.animar {
+  animation: pulseGlow 0.4s ease;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 rgba(255, 0, 0, 0);
+  }
+
+  50% {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+  }
+
+  100% {
+    box-shadow: 0 0 0 rgba(255, 0, 0, 0);
+  }
+}
+/* ================= CONTATO PROFISSIONAL ================= */
+
+#contato h2 {
+    font-weight: 700;
+}
+
+#contato .card {
+    border-radius: 12px;
+}
+
+.map-responsive {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.map-responsive iframe {
+    width: 100%;
+    height: 350px;
+    border: 0;
+}
+
+/* Responsividade extra */
+@media (max-width: 768px) {
+    .map-responsive iframe {
+        height: 280px;
+    }
+}

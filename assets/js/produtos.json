@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "nome": "Kit Festa Safari",
+    "descricao": "Arquivo digital para Silhouette",
+    "preco": 9.90,
+    "imagem": "assets/img/galeria/safari.webp"
+  },
+  {
+    "id": 2,
+    "nome": "Kit Festa Princesa",
+    "descricao": "Arquivo digital para Silhouette",
+    "preco": 8.50,
+    "imagem": "assets/img/galeria/princesa.webp"
+  },
+  {
+    "id": 3,
+    "nome": "Kit Festa Dinossauro",
+    "descricao": "Arquivo digital para Silhouette",
+    "preco": 10.90,
+    "imagem": "assets/img/galeria/dinossauros.webp"
+  },
+   {
+    "id": 4,
+    "nome": "Kit Festa Star Wars",
+    "descricao": "Arquivo digital para Silhouette",
+    "preco": 12.90,
+    "imagem": "assets/img/galeria/starwars.webp"
+  },
+   {
+    "id": 5,
+    "nome": "Kit Festa Festa Junina",
+    "descricao": "Arquivo digital para Silhouette",
+    "preco": 8.90,
+    "imagem": "assets/img/galeria/festajunina.webp"
+  },
+   {
+    "id": 6,
+    "nome": "Kit Festa Super Heróis",
+    "descricao": "Arquivo digital para Silhouette",
+    "preco": 10.90,
+    "imagem": "assets/img/galeria/superherois.webp"
+  },
+   {
+    "id": 7,
+    "nome": "Kit Festa Pokemon",
+    "descricao": "Arquivo digital para Silhouette",
+    "preco": 12.90,
+    "imagem": "assets/img/galeria/pokemon.webp"
+  },
+   {
+    "id": 8,
+    "nome": "Kit Festa Bosque Encantado",
+    "descricao": "Arquivo digital para Silhouette",
+    "preco": 11.90,
+    "imagem": "assets/img/galeria/bosque.webp"
+  },
+   {
+    "id": 9,
+    "nome": "Kit Festa Meninas Super Poderosas",
+    "descricao": "Arquivo digital para Silhouette",
+    "preco": 12.90,
+    "imagem": "assets/img/galeria/meninas..webp"
+  }
+]
