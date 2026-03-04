@@ -38,15 +38,17 @@
   <link rel="stylesheet" href="./assets/css/style.css">
 
 </head>
+
 <body>
 
   <!-- ================= NAVBAR ================= -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
-  <img src="assets/img/logo/android-chrome-192x192.png" alt="Logo Festa no Papel" width="40" height="40" class="me-2">
-  Festa no Papel
-</a>
+        <img src="assets/img/logo/android-chrome-192x192.png" alt="Logo Festa no Papel" width="40" height="40"
+          class="me-2">
+        Festa no Papel
+      </a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
         <span class="navbar-toggler-icon"></span>
@@ -197,7 +199,7 @@
                 <h4 class="fw-bold">Plano Mensal</h4>
                 <p class="display-6 fw-bold text-success">R$ 39,90<span style="font-size:16px;">/mês</span></p>
                 <p>Cancele quando quiser</p>
-                <button class="btn btn-success btn-lg w-100">
+                <button id="btnAssinar" class="btn btn-success btn-lg w-100">
                   Assinar Agora
                 </button>
               </div>
@@ -257,63 +259,61 @@
 
       </div>
     </section>
-    
-   <!-- ================= CONTATO ================= -->
-<section id="contato" class="py-5 bg-light">
-  <div class="container" data-aos="fade-up">
 
-    <div class="text-center mb-5">
-      <h2 class="fw-bold">Contato</h2>
-      <p class="text-muted">Entre em contato ou visualize nossa localização demonstrativa</p>
-    </div>
+    <!-- ================= CONTATO ================= -->
+    <section id="contato" class="py-5 bg-light">
+      <div class="container" data-aos="fade-up">
 
-    <div class="row align-items-center g-4">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold">Contato</h2>
+          <p class="text-muted">Entre em contato ou visualize nossa localização demonstrativa</p>
+        </div>
 
-      <!-- INFORMAÇÕES -->
-      <div class="col-md-5">
-        <div class="card shadow-sm border-0 p-4 h-100">
-          
-          <h5 class="fw-bold mb-4">Informações</h5>
+        <div class="row align-items-center g-4">
 
-          <p class="mb-3">
-            <i class="fa-brands fa-whatsapp text-success me-2"></i>
-            <strong>WhatsApp:</strong> (12) 99999-9999
-          </p>
+          <!-- INFORMAÇÕES -->
+          <div class="col-md-5">
+            <div class="card shadow-sm border-0 p-4 h-100">
 
-          <p class="mb-3">
-            <i class="fa-brands fa-instagram text-danger me-2"></i>
-            <strong>Instagram:</strong> @festanopapel
-          </p>
+              <h5 class="fw-bold mb-4">Informações</h5>
 
-          <p class="mb-3">
-            <i class="fa-solid fa-envelope text-primary me-2"></i>
-            <strong>E-mail:</strong> contato@festanopapel.com
-          </p>
+              <p class="mb-3">
+                <i class="fa-brands fa-whatsapp text-success me-2"></i>
+                <strong>WhatsApp:</strong> (12) 99999-9999
+              </p>
 
-          <hr>
+              <p class="mb-3">
+                <i class="fa-brands fa-instagram text-danger me-2"></i>
+                <strong>Instagram:</strong> @festanopapel
+              </p>
 
-          <p class="text-muted small mb-0">
-            📍 Localização demonstrativa.
-          </p>
+              <p class="mb-3">
+                <i class="fa-solid fa-envelope text-primary me-2"></i>
+                <strong>E-mail:</strong> contato@festanopapel.com
+              </p>
+
+              <hr>
+
+              <p class="text-muted small mb-0">
+                📍 Localização demonstrativa.
+              </p>
+
+            </div>
+          </div>
+
+          <!-- MAPA -->
+          <div class="col-md-7">
+            <div class="map-responsive shadow-sm">
+              <iframe src="https://www.google.com/maps?q=Sao+Jose+dos+Campos,+SP&output=embed" loading="lazy"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
 
         </div>
+
       </div>
-
-      <!-- MAPA -->
-      <div class="col-md-7">
-        <div class="map-responsive shadow-sm">
-          <iframe 
-            src="https://www.google.com/maps?q=Sao+Jose+dos+Campos,+SP&output=embed"
-            loading="lazy"
-            allowfullscreen>
-          </iframe>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-</section>
+    </section>
 
     <!-- ================= FOOTER ================= -->
     <footer class="bg-dark text-white text-center py-3">

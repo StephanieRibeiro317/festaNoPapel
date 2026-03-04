@@ -266,3 +266,78 @@ carrossel.addEventListener("mouseleave", iniciarAutoScroll);
 iniciarAutoScroll();
  
 
+// ================= ASSINATURA =================
+document.addEventListener("DOMContentLoaded", function () {
+
+  const btnAssinar = document.getElementById("btnAssinar");
+
+  if (btnAssinar) {
+    btnAssinar.addEventListener("click", function () {
+
+      let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+      // Verifica se assinatura já existe
+      const assinaturaExiste = carrinho.find(item => item.tipo === "assinatura");
+
+      if (!assinaturaExiste) {
+        const assinatura = {
+          id: Date.now(),
+          nome: "Clube Festa no Papel",
+          preco: 39.90,
+          tipo: "assinatura",
+          recorrente: true
+        };
+
+        carrinho.push(assinatura);
+        localStorage.setItem("carrinho", JSON.stringify(carrinho));
+      }
+
+      atualizarCarrinho();
+      atualizarContador();
+
+      // Abre o carrinho automaticamente
+      const offcanvas = new bootstrap.Offcanvas(document.getElementById("carrinhoOffcanvas"));
+      offcanvas.show();
+    });
+  }
+
+});
+function atualizarCarrinho() {
+  const lista = document.getElementById("listaCarrinho");
+  const totalSpan = document.getElementById("totalCarrinho");
+
+  let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+  lista.innerHTML = "";
+  let total = 0;
+
+  carrinho.forEach(item => {
+    total += item.preco;
+
+    lista.innerHTML += `
+      <div class="card mb-2">
+        <div class="card-body p-2">
+          <h6 class="mb-1">${item.nome}</h6>
+          <small class="text-muted">
+            ${item.tipo === "assinatura" ? "Plano Mensal (Recorrente)" : "Produto Digital"}
+          </small>
+          <p class="mb-0 fw-bold">R$ ${item.preco.toFixed(2)}</p>
+        </div>
+      </div>
+    `;
+  });
+
+  totalSpan.textContent = total.toFixed(2);
+}
+
+function atualizarContador() {
+  const contador = document.getElementById("contadorCarrinho");
+  let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+  contador.textContent = carrinho.length;
+}
+
+// Atualiza ao carregar página
+document.addEventListener("DOMContentLoaded", function () {
+  atualizarCarrinho();
+  atualizarContador();
+});
