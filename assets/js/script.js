@@ -264,7 +264,10 @@ carrossel.addEventListener("mouseenter", pararAutoScroll);
 carrossel.addEventListener("mouseleave", iniciarAutoScroll);
 
 iniciarAutoScroll();
- 
+
+
+
+
 
 // ================= ASSINATURA =================
 document.addEventListener("DOMContentLoaded", function () {
@@ -281,7 +284,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (!assinaturaExiste) {
         const assinatura = {
-          id: Date.now(),
+          id: Date.now(), // ID único
           nome: "Clube Festa no Papel",
           preco: 39.90,
           tipo: "assinatura",
@@ -316,12 +319,23 @@ function atualizarCarrinho() {
 
     lista.innerHTML += `
       <div class="card mb-2">
-        <div class="card-body p-2">
-          <h6 class="mb-1">${item.nome}</h6>
-          <small class="text-muted">
-            ${item.tipo === "assinatura" ? "Plano Mensal (Recorrente)" : "Produto Digital"}
-          </small>
-          <p class="mb-0 fw-bold">R$ ${item.preco.toFixed(2)}</p>
+        <div class="card-body p-2 d-flex justify-content-between align-items-start">
+          
+          <div>
+            <h6 class="mb-1">${item.nome}</h6>
+            <small class="text-muted">
+              ${item.tipo === "assinatura" 
+                ? "Plano Mensal (Recorrente)" 
+                : "Produto Digital"}
+            </small>
+            <p class="mb-0 fw-bold">R$ ${item.preco.toFixed(2)}</p>
+          </div>
+
+          <button class="btn btn-sm btn-outline-danger"
+                  onclick="removerItem(${item.id})">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+
         </div>
       </div>
     `;
@@ -341,3 +355,14 @@ document.addEventListener("DOMContentLoaded", function () {
   atualizarCarrinho();
   atualizarContador();
 });
+
+function removerItem(id) {
+  let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+  carrinho = carrinho.filter(item => item.id !== id);
+
+  localStorage.setItem("carrinho", JSON.stringify(carrinho));
+
+  atualizarCarrinho();
+  atualizarContador();
+}

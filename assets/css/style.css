@@ -425,3 +425,76 @@ footer small {
         height: 280px;
     }
 }
+
+/* css dos serviços */
+
+
+#servicos {
+  background-color: #F3EDB3; /* mesmo fundo do site */
+}
+
+#servicos h1 {
+  color: #88C28E;
+  font-weight: 700;
+}
+
+#servicos p {
+  color: #555;
+}
+
+/* ABAS */
+.abas-servicos .nav-link {
+  background: white;
+  color: #2A2A2A;
+  border-radius: 30px;
+  margin: 0 8px;
+  padding: 8px 20px;
+  border: 2px solid #E7A8B8;
+  transition: 0.3s;
+}
+
+.abas-servicos .nav-link.active {
+  background: #88C28E;
+  color: white;
+  border-color: #88C28E;
+}
+
+.abas-servicos .nav-link:hover {
+  background: #B79AD6;
+  color: white;
+  border-color: #B79AD6;
+}
+
+/* CARDS NETFLIX AJUSTADOS */
+.video-card-netflix {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.video-card-netflix img {
+  border-radius: 16px;
+  border: 3px solid #E7A8B8;
+}
+
+.video-card-netflix:hover {
+  transform: translateY(-6px);
+}
+
+.video-card-netflix p {
+  font-size: 14px;
+  color: #2A2A2A;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+/* ÁREA VIP */
+#vip h4 {
+  color: #B79AD6;
+  font-weight: 700;
+}
+
+#bloqueioVip {
+  background: white;
+  border-radius: 20px;
+  border: 2px dashed #B79AD6;
+}
