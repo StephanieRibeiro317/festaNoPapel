@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const videosVip = [
       { id: "wLvjpIygJVo", titulo: "Aula VIP 1" },
       { id: "kiAk4KZafRw", titulo: "Aula VIP 2" },
-      { id: "pWFKRgR0Aag", titulo: "Configuração Avançada Cameo 5" }
+      { id: "Dwt9O6OVzPA", titulo: "Aula VIP 3" }
     ];
 
     videosVip.forEach(video => {
